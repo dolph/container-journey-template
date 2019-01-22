@@ -15,11 +15,11 @@ This scenario provides instructions for the following tasks:
 Install the IBM Bluemix Container Service CLI, the image registry CLI, and their prerequisites. These CLIs are used in later lessons and are required to manage your Kubernetes cluster from your local machine, create images to deploy as containers, and in a later tutorial, deploy apps into the cluster.
 
 
-1. If you do not have one yet, create a [Bluemix account](https://console.ng.bluemix.net/registration/). Make note of your user name and password as this information is required later.
+1. If you do not have one yet, create a [Bluemix account](https://cloud.ibm.com/registration/). Make note of your user name and password as this information is required later.
 
 > For **Linux** users, you can clone this repo and run `bash linux.sh`. Then, move on to [Step 2](#step-2-setting-up-your-cluster-environment).
 
-2. As a prerequisite for the Bluemix Container Service plug-in, install the [Bluemix CLI](http://clis.ng.bluemix.net/ui/home.html). The prefix for running commands by using the Bluemix CLI is `bx`.
+2. As a prerequisite for the Bluemix Container Service plug-in, install the [Bluemix CLI](https://cloud.ibm.com/docs/cli/index.html). The prefix for running commands by using the Bluemix CLI is `bx`.
 
 > For **Mac** users, after you have installed the Bluemix CLI, you can clone this repo and run `bash osx.sh` in your terminal. Then move on to [Step 2](#step-2-setting-up-your-cluster-environment).
 
@@ -52,7 +52,7 @@ Install the IBM Bluemix Container Service CLI, the image registry CLI, and their
     Space:          test
     ```
 
-4. Alternatively, if you are using Single Sign-On, you can authenticate with Bluemix by using an API key. To create an API key, navigate to the _Manage_ -> _Security_ -> _Bluemix API Keys_ menu option, or go directly to: [https://console.bluemix.net/iam/#/apikeys](https://console.bluemix.net/iam/#/apikeys). Click the _Create_ button to create a new API key.
+4. Alternatively, if you are using Single Sign-On, you can authenticate with Bluemix by using an API key. To create an API key, navigate to the _Manage_ -> _Security_ -> _Bluemix API Keys_ menu option, or go directly to: [https://cloud.ibm.com/iam/#/apikeys](https://cloud.ibm.com/iam/#/apikeys). Click the _Create_ button to create a new API key.
 
 > Note: Once created, you will not be able to view the API key again, so save it somewhere safe!
 
@@ -91,15 +91,15 @@ You can now use the API key to authenticate with Bluemix by using the `bx login 
     $ bx cs init
     ```
 
-7. To view a local version of the Kubernetes dashboard and to deploy apps into your clusters, install the [Kubernetes CLI](https://kubernetes.io/docs/user-guide/prereqs/). The prefix for running commands by using the Kubernetes CLI is kubectl.
+7. To view a local version of the Kubernetes dashboard and to deploy apps into your clusters, install the [Kubernetes CLI](https://kubernetes.io/docs/tasks/tools/install-kubectl/). The prefix for running commands by using the Kubernetes CLI is kubectl.
 
     **a. Download the Kubernetes CLI.**
 
-    OS X: http://storage.googleapis.com/kubernetes-release/release/v1.5.3/bin/darwin/amd64/kubectl
+    OS X: https://storage.googleapis.com/kubernetes-release/release/v1.5.3/bin/darwin/amd64/kubectl
 
-    Linux: http://storage.googleapis.com/kubernetes-release/release/v1.5.3/bin/linux/amd64/kubectl
+    Linux: https://storage.googleapis.com/kubernetes-release/release/v1.5.3/bin/linux/amd64/kubectl
 
-    Windows: http://storage.googleapis.com/kubernetes-release/release/v1.5.3/bin/windows/amd64/kubectl.exe
+    Windows: https://storage.googleapis.com/kubernetes-release/release/v1.5.3/bin/windows/amd64/kubectl.exe
 
     **b. For OSX and Linux users, convert the binary file to an executable.**
 
@@ -132,8 +132,8 @@ Congratulations! You successfully created your Bluemix account and installed the
 2. Before you continue to the next step, verify that the deployment of your worker node is complete.
     ```bash
     $ bx cs workers [your_cluster_name]
-    ID                                           Public IP       Private IP    Machine Type  State     Status   
-    dal10-pa8dfcc5223804439c87489886dbbc9c07-w1  169.47.223.113  10.171.42.93  free         deployed  Deploy Automation                                          Successful   
+    ID                                           Public IP       Private IP    Machine Type  State     Status
+    dal10-pa8dfcc5223804439c87489886dbbc9c07-w1  169.47.223.113  10.171.42.93  free         deployed  Deploy Automation                                          Successful
     ```
 
 3. Set the context for your cluster in your CLI. Every time you log in to the IBM Bluemix Container Service CLI to work with the cluster, you must run these commands to set the path to the cluster's configuration file as a session variable. The Kubernetes CLI uses this variable to find a local configuration file and certificates that are necessary to connect with the cluster in Bluemix.
