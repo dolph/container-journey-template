@@ -54,11 +54,11 @@ Install the IBM Bluemix Container Service CLI, the image registry CLI, and their
 
 4. Alternatively, if you are using Single Sign-On, you can authenticate with Bluemix by using an API key. To create an API key, navigate to the _Manage_ -> _Security_ -> _Bluemix API Keys_ menu option, or go directly to: [https://console.bluemix.net/iam/#/apikeys](https://console.bluemix.net/iam/#/apikeys). Click the _Create_ button to create a new API key.
 
-> Note: Once created, you will not be able to view the API key again, so save it somewhere safe!
+    > Note: Once created, you will not be able to view the API key again, so save it somewhere safe!
 
-![](images/sso.png)
+    ![](images/sso.png)
 
-You can now use the API key to authenticate with Bluemix by using the `bx login --apikey <apikey>`.
+    You can now use the API key to authenticate with Bluemix by using the `bx login --apikey <apikey>`.
 
     ```bash
 
